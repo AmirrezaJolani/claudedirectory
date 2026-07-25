@@ -22,6 +22,22 @@ Version state lives in an \`appversion.json\` at the project root (SemVer versio
 release stage, build counters, and the commit hash). \`package.json\` and any other
 configured JSON files are kept in sync *from* it, so there is a single source of truth.
 
+## Install
+
+Plugin marketplace — gets the skill *and* the \`/appversion:*\` commands. These are slash commands:
+run them inside an interactive \`claude\` session, not in your shell.
+
+\`\`\`
+/plugin marketplace add AmirrezaJolani/appversion-skill
+/plugin install appversion@appversion-skill
+\`\`\`
+
+Skill only, no commands:
+
+\`\`\`bash
+npx skills add AmirrezaJolani/appversion-skill --skill appversion
+\`\`\`
+
 ## Usage
 \`\`\`
 /appversion:package     # version files
@@ -67,7 +83,11 @@ appversion install-hook     # pre-push hook: a forgotten sync fails the push
 appversion sync             # repair drift
 \`\`\`
 
-\`--auto\` maps \`feat\`→minor, \`fix\`→patch, \`feat!\`/\`BREAKING CHANGE:\`→major.
+\`--auto\` maps \`feat\`→minor, \`fix\`→patch, and \`feat!\` or a \`BREAKING CHANGE:\` *footer*→major —
+the phrase in prose or a branch name does not force a major.
+
+Enforcement is read-only and blocks nothing but a drifted push: a branch with no \`appversion.json\`
+passes untouched, and it never bumps or pushes on its own.
 
 ## Optional ticket enrichment (read-only)
 

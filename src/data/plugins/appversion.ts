@@ -21,14 +21,14 @@ export const appversionPlugin: Plugin = {
   }
 }`,
   commands: [
-    { name: "/appversion:package", description: "Bump the version and sync package.json, config JSON files, and badges" },
+    { name: "/appversion:package", description: "The version files — appversion.json, package.json, configured JSON and badges. Covers bump, --auto, check, sync, and install-hook" },
     { name: "/appversion:github", description: "Create the annotated tag and cut the GitHub Release" },
-    { name: "/appversion:release", description: "Run the full guided release: analyze, bump, changelog, tag, Release" },
-    { name: "/appversion:jira", description: "Set up and verify read-only Jira ticket enrichment" },
-    { name: "/appversion:linear", description: "Set up and verify read-only Linear issue enrichment" },
-    { name: "/appversion:plane", description: "Set up and verify read-only Plane issue enrichment" },
-    { name: "/appversion:shortcut", description: "Set up and verify read-only Shortcut story enrichment" },
-    { name: "/appversion:clickup", description: "Set up and verify read-only ClickUp task enrichment" },
+    { name: "/appversion:release", description: "The whole guided flow: analyze, recommend, bump, changelog, tag, Release" },
+    { name: "/appversion:jira", description: "Read-only Jira enrichment — config, JIRA_EMAIL / JIRA_API_TOKEN, PROJ-123 IDs" },
+    { name: "/appversion:linear", description: "Read-only Linear enrichment — LINEAR_API_KEY, team-key IDs" },
+    { name: "/appversion:plane", description: "Read-only Plane enrichment — PLANE_API_TOKEN, host and workspace" },
+    { name: "/appversion:shortcut", description: "Read-only Shortcut enrichment — SHORTCUT_API_TOKEN, sc-1234 IDs" },
+    { name: "/appversion:clickup", description: "Read-only ClickUp enrichment — CLICKUP_API_TOKEN, CU-… or custom prefixes" },
   ],
   relatedItems: [
     { type: "plugin", slug: "changelog-generator", relationship: "works-with" },
