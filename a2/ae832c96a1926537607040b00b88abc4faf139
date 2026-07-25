@@ -1,0 +1,21 @@
+src/data/skills/appversion.ts
+  s_56c39779617d1c::t_e2d3a336a4dd34 110-111
+src/data/plugins/appversion.ts
+  s_56c39779617d1c::t_b9561139c0d800 34-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "a2ae832c96a1926537607040b00b88abc4faf139",
+  "prompts": {},
+  "sessions": {
+    "s_56c39779617d1c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "02449914-1590-4913-b8b9-e9b4936dc819",
+        "model": "claude-opus-5"
+      },
+      "human_author": "AmirrezaJolani <amirreza.mameghani@pillar.it>"
+    }
+  }
+}
