@@ -31,6 +31,8 @@ export const appversionPlugin: Plugin = {
     { name: "/appversion:clickup", description: "Read-only ClickUp enrichment — CLICKUP_API_TOKEN, CU-… or custom prefixes" },
   ],
   relatedItems: [
+    { type: "how-to", slug: "appversion-release", relationship: "documented-by" },
+    { type: "hook", slug: "appversion-drift-check", relationship: "contains" },
     { type: "plugin", slug: "changelog-generator", relationship: "works-with" },
     { type: "skill", slug: "changelog", relationship: "works-with" },
   ],
