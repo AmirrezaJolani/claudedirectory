@@ -107,6 +107,8 @@ call is shell-free. \`--dry-run\` on any command previews without writing. Works
 under Claude Code, Gemini CLI, Codex, Cursor, opencode, and GitHub Copilot. MIT licensed.
 `,
   relatedItems: [
+    { type: "how-to", slug: "appversion-release", relationship: "documented-by" },
+    { type: "hook", slug: "appversion-drift-check", relationship: "works-with" },
     { type: "skill", slug: "changelog", relationship: "works-with" },
     { type: "plugin", slug: "appversion", relationship: "works-with" },
   ],
